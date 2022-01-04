@@ -1,9 +1,53 @@
-import React from "react";
+import React, { useState } from "react";
+import logo from "./logo.png";
+import "../../styles/LoginScreen.css";
+import Button from "react-bootstrap/Button";
+import Signup from "./Signup";
+import { Home } from "./Home";
 
 function Login() {
-  return <div className="loginScreen">
-    
-  </div>;
+  const [signIn, setSignIn] = useState(false);
+  return (
+    <div className="loginScreen">
+      <div className="loginScreen_background">
+        <img className="loginScreen_logo" src={logo} alt="main-logo" />
+        <Button
+          onClick={() => setSignIn(true)}
+          className="loginScreen_button"
+          variant="dark"
+          size="lg"
+        >
+          Login
+        </Button>
+        <div className="loginScreen_gradient" />
+      </div>
+      <div className="loginScreen_body">
+        {signIn ? (
+          <Signup />
+        ) : (
+          <>
+            <h1>Unlimited movies for you and your loved ones.</h1>
+            <h2>Watch all you want. Anywhere you are.</h2>
+            <h3>Ready to watch? Login now.</h3>
+            <div className="loginScreen_input">
+              <form>
+                <input type="email" placeholder="username" />
+                <input type="password" placeholder="password" />
+                <Button
+                  onClick={() => setSignIn(true)}
+                  className="loginScreen_submit"
+                  variant="dark"
+                  size="md"
+                >
+                  Submit
+                </Button>
+              </form>
+            </div>
+          </>
+        )}
+      </div>
+    </div>
+  );
 }
 
 export default Login;

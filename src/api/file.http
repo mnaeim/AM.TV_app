@@ -1,0 +1,8 @@
+POST https://3001-kumquat-xerinae-io6uxjnc.ws-us25.gitpod.io/api/register
+content-type: application/json
+
+{
+    "username": "mae",
+    "email": "you@gmail.com",
+    "password": "123"
+}
