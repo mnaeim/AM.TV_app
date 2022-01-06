@@ -2,6 +2,7 @@ import React from "react";
 import { BrowserRouter, Route, Switch } from "react-router-dom";
 import { Home } from "./pages/Home";
 import Login from "./pages/Login";
+import Register from "./pages/Register";
 
 //create your first component
 // export const Layout = () => {
@@ -11,7 +12,9 @@ import Login from "./pages/Login";
 
 //   return (
 function Layout() {
-  const user = null;
+  const user = {
+    name: "abc",
+  };
 
   return (
     <div className="app">
@@ -25,6 +28,11 @@ function Layout() {
             </Route>
           </Switch>
         )}
+        <Switch>
+          <Route exact path="/register">
+            <Register />
+          </Route>
+        </Switch>
       </BrowserRouter>
     </div>
   );

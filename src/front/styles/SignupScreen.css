@@ -1,9 +1,22 @@
 .signupScreen {
-  max-width: 300px;
+  max-width: 400px;
   padding: 70px;
   margin-left: auto;
   margin-right: auto;
   background: black;
+}
+
+.signupScreen > form > h1 {
+  text-align: left;
+  margin-bottom: 25px;
+}
+
+.signup_gray {
+  color: gray;
+}
+
+.signupScreen > form > h4 {
+  text-align: left;
 }
 
 .signupScreen > form {
@@ -20,11 +33,20 @@
   padding: 5px 15px;
 }
 
-.watch_button {
-  margin: 20px;
+.signupScreen > form > button {
+  padding: 16px 20px;
   font-size: 1rem;
-  height: 70px;
-  width: 50%;
+  color: white;
+  border-radius: 5px;
+  width: 60%;
   font-weight: 600;
+  border: none;
   cursor: pointer;
+  margin-top: 20px;
+}
+
+.signup_link:hover {
+  cursor: pointer;
+  text-decoration: underline;
+
 }

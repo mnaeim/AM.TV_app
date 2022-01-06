@@ -7,7 +7,7 @@ from sqlalchemy import table
 
 
 api = Blueprint('api', __name__)
-# ph = PasswordHasher()
+ph = PasswordHasher()
 
 
 @api.route('/hello', methods=['POST', 'GET'])

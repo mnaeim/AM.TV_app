@@ -4,6 +4,7 @@ import "../../styles/LoginScreen.css";
 import Button from "react-bootstrap/Button";
 import Signup from "./Signup";
 import { Home } from "./Home";
+import { Link } from "react-router-dom";
 
 function Login() {
   const [signIn, setSignIn] = useState(false);
@@ -11,14 +12,14 @@ function Login() {
     <div className="loginScreen">
       <div className="loginScreen_background">
         <img className="loginScreen_logo" src={logo} alt="main-logo" />
-        <Button
+        <Link to="/Register"><Button
           onClick={() => setSignIn(true)}
           className="loginScreen_button"
           variant="dark"
           size="lg"
         >
-          Login
-        </Button>
+          Sign Up
+        </Button></Link>
         <div className="loginScreen_gradient" />
       </div>
       <div className="loginScreen_body">
@@ -31,8 +32,7 @@ function Login() {
             <h3>Ready to watch? Login now.</h3>
             <div className="loginScreen_input">
               <form>
-                <input type="email" placeholder="username" />
-                <input type="password" placeholder="password" />
+                <input type="email" placeholder="Email" />
                 <Button
                   onClick={() => setSignIn(true)}
                   className="loginScreen_submit"
