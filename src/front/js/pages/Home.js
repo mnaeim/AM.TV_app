@@ -4,15 +4,14 @@ import requests from "../store/requests";
 import "../../styles/Home.css";
 import Row from "../component/Row";
 import Nav from "../component/Nav";
-import logo from "./logo.png";
-
+import AMTV1 from "./AMTV1.png";
 
 export const Home = () => {
   return (
     <div className="text-center mt-0 app">
       <Nav />
       <Top />
-      <img className="main-logo" src={logo} alt="main-logo" />
+      <img className="main-logo" src={AMTV1} alt="main-logo" />
 
       <Row
         className="title"

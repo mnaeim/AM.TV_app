@@ -1,5 +1,5 @@
 import React, { useState } from "react";
-import logo from "./logo.png";
+import AMTV1 from "./AMTV1.png";
 import "../../styles/signinScreen.css";
 import Button from "react-bootstrap/Button";
 import { Link } from "react-router-dom";
@@ -9,7 +9,7 @@ function Signin() {
   return (
     <div className="signinScreen">
       <div className="signinScreen_background">
-        <img className="signinScreen_logo" src={logo} alt="main-logo" />
+        <img className="signinScreen_logo" src={AMTV1} alt="main-logo" />
         <Link to="/Register">
           <Button
             onClick={() => setSignIn(true)}

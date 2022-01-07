@@ -1,8 +1,9 @@
 import React, { useEffect, useState } from "react";
 import "../../styles/Nav.css";
-import logo3 from "./logo3.png";
+import AMTV2 from "./AMTV2.png";
 import Button from "react-bootstrap/Button";
 import { Link } from "react-router-dom";
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 
 function Nav() {
   const [show, handleShow] = useState(false);
@@ -20,11 +21,12 @@ function Nav() {
 
   return (
     <div className={`nav ${show && "nav__black"}`}>
-      <img className="nav-logo" src={logo3} alt="MA-logo" />
+      <img className="nav-logo" src={AMTV2} alt="MA-logo" />
+      <FontAwesomeIcon icon="fa-regular fa-heart" />
       <div className="navbutton mb-2">
         <Link to="/signin">
           <Button className="button1" variant="dark" size="lg">
-            Log In / Sign Up
+            Sign Out
           </Button>
         </Link>
       </div>

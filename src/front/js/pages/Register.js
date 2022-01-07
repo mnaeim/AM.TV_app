@@ -1,29 +1,24 @@
 import React from "react";
 import Button from "react-bootstrap/Button";
 import "../../styles/Register.css";
-import logo from "./logo.png";
+import AMTV1 from "./AMTV1.png";
 import { Link } from "react-router-dom";
 
 function Register() {
   return (
     <div className="register">
       <div className="registerScreen">
-        <img className="registerScreen_logo" src={logo} alt="main-logo" />
+        <img className="registerScreen_logo" src={AMTV1} alt="main-logo" />
         <Link to="/signin">
-          <Button
-            onClick={() => setSignIn(true)}
-            className="registerScreen_button"
-            variant="dark"
-            size="lg"
-          >
+          <Button className="registerScreen_button" variant="dark" size="lg">
             Sign In
           </Button>
         </Link>
         <div className="registerScreen_gradient" />
       </div>
-      <div className="signinScreen_body">
+      <div className="registerScreen_body">
         <>
-          <div className="signinScreen_input">
+          <div className="registerScreen_input">
             <form>
               <h1>Sign Up</h1>
               <input placeholder="Full Name" type="text" />
