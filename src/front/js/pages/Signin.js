@@ -1,49 +1,49 @@
-import React from "react";
-import Button from "react-bootstrap/Button";
-import "../../styles/Register.css";
+import React, { useState } from "react";
 import logo from "./logo.png";
+import "../../styles/signinScreen.css";
+import Button from "react-bootstrap/Button";
 import { Link } from "react-router-dom";
 
-function Register() {
+function Signin() {
+  const [signIn, setSignIn] = useState(false);
   return (
-    <div className="register">
-      <div className="registerScreen">
-        <img className="registerScreen_logo" src={logo} alt="main-logo" />
-        <Link to="/signin">
+    <div className="signinScreen">
+      <div className="signinScreen_background">
+        <img className="signinScreen_logo" src={logo} alt="main-logo" />
+        <Link to="/Register">
           <Button
             onClick={() => setSignIn(true)}
-            className="registerScreen_button"
+            className="signinScreen_button"
             variant="dark"
             size="lg"
           >
-            Sign In
+            Sign Up
           </Button>
         </Link>
-        <div className="registerScreen_gradient" />
+        <div className="signinScreen_gradient" />
       </div>
       <div className="signinScreen_body">
         <>
           <div className="signinScreen_input">
             <form>
-              <h1>Sign Up</h1>
-              <input placeholder="Full Name" type="text" />
+              <h1>Sign In</h1>
               <input placeholder="Username" type="email" />
               <input placeholder="Password" type="password" />
               <Link to="/">
                 <Button
                   onClick={() => setSignIn(true)}
-                  className="registerScreen_submit"
+                  className="signinScreen_submit"
                   variant="dark"
                   size="md"
                 >
-                  Register
+                  Watch now!
                 </Button>
               </Link>
               <br></br>
               <h5>
-                <span className="signup_gray">Already have an account? </span>
-                <Link to="/signin">
-                  <span className="signup_link">Sign In</span>
+                <span className="signup_gray">New to AM-TV? </span>
+                <Link to="/register">
+                  <span className="signup_link">Sign Up now.</span>
                 </Link>
               </h5>
             </form>
@@ -54,4 +54,4 @@ function Register() {
   );
 }
 
-export default Register;
+export default Signin;

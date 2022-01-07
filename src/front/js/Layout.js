@@ -1,8 +1,8 @@
 import React from "react";
 import { BrowserRouter, Route, Switch } from "react-router-dom";
 import { Home } from "./pages/Home";
-import Login from "./pages/Login";
 import Register from "./pages/Register";
+import SignIn from "./pages/Signin";
 
 //create your first component
 // export const Layout = () => {
@@ -12,23 +12,18 @@ import Register from "./pages/Register";
 
 //   return (
 function Layout() {
-  const user = {
-    name: "abc",
-  };
+  const user = { name: "a" };
 
   return (
     <div className="app">
       <BrowserRouter>
-        {!user ? (
-          <Login />
-        ) : (
-          <Switch>
-            <Route exact path="/">
-              <Home />
-            </Route>
-          </Switch>
-        )}
         <Switch>
+          <Route exact path="/">
+            {!user ? <SignIn /> : <Home />}
+          </Route>
+          <Route exact path="/signin">
+            <SignIn />
+          </Route>
           <Route exact path="/register">
             <Register />
           </Route>

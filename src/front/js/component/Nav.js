@@ -2,6 +2,7 @@ import React, { useEffect, useState } from "react";
 import "../../styles/Nav.css";
 import logo3 from "./logo3.png";
 import Button from "react-bootstrap/Button";
+import { Link } from "react-router-dom";
 
 function Nav() {
   const [show, handleShow] = useState(false);
@@ -13,7 +14,7 @@ function Nav() {
       } else handleShow(false);
     });
     return () => {
-      window.removeEventListener("scroll");
+      // window.removeEventListener("scroll");
     };
   }, []);
 
@@ -21,9 +22,11 @@ function Nav() {
     <div className={`nav ${show && "nav__black"}`}>
       <img className="nav-logo" src={logo3} alt="MA-logo" />
       <div className="navbutton mb-2">
-        <Button className="button1" variant="dark" size="lg">
-          Log In / Sign Up
-        </Button>
+        <Link to="/signin">
+          <Button className="button1" variant="dark" size="lg">
+            Log In / Sign Up
+          </Button>
+        </Link>
       </div>
     </div>
   );
