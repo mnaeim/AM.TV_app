@@ -5,53 +5,50 @@ import Button from "react-bootstrap/Button";
 import { Link } from "react-router-dom";
 
 function Signin() {
-  const [signIn, setSignIn] = useState(false);
-  return (
-    <div className="signinScreen">
-      <div className="signinScreen_background">
-        <img className="signinScreen_logo" src={AMTV1} alt="main-logo" />
-        <Link to="/Register">
-          <Button
-            onClick={() => setSignIn(true)}
-            className="signinScreen_button"
-            variant="dark"
-            size="lg"
-          >
-            Sign Up
-          </Button>
-        </Link>
-        <div className="signinScreen_gradient" />
-      </div>
-      <div className="signinScreen_body">
-        <>
-          <div className="signinScreen_input">
-            <form>
-              <h1>Sign In</h1>
-              <input placeholder="Username" type="email" />
-              <input placeholder="Password" type="password" />
-              <Link to="/">
-                <Button
-                  onClick={() => setSignIn(true)}
-                  className="signinScreen_submit"
-                  variant="dark"
-                  size="md"
-                >
-                  Watch now!
-                </Button>
-              </Link>
-              <br></br>
-              <h5>
-                <span className="signup_gray">New to AM-TV? </span>
-                <Link to="/register">
-                  <span className="signup_link">Sign Up now.</span>
-                </Link>
-              </h5>
-            </form>
-          </div>
-        </>
-      </div>
-    </div>
-  );
-}
+  const [email, setEmail] = useState("");
+  const [password, setPassword] = useState("");
+  const token = sessionStorage.getItem("token");
+  console.log("this is your token", token)
 
+  const handleClick = () =>{
+  const opts = {
+    method: "POST",
+    body : JSON.stringify({
+      
+   
+        "email": email,
+        "password": password
+    
+    })
+  }
+    fetch("https://3001-mnaeim-matvapp-zewp3qv4xrf.ws-us30.gitpod.io/api/login",opts)
+    .then(resp => {
+      if (resp.status === 200) return resp.json();
+      else alert("there has been some error");
+    })
+    .then(data => {
+      console.log("this came from the back end",data)
+      sessionStorage.setItem("token",data.token);
+    })
+    .catch(error => {
+      console.error("there was an error"), error;
+    })
+  }
+
+return (
+  
+    <div>
+    {(token && token !="" && token !=undefined ) ?  <Link to="/">sucsess</Link>:
+    <div>
+<input type="text" placeholder="Email" value={email} onChange={(e)=> setEmail(e.target.value)}/>
+<input type="text" placeholder="Password" value={password} onChange={(e)=> setPassword(e.target.value)}/>
+<button onClick={handleClick}>
+  login
+</button>
+</div>
+}
+</div>
+)
+}
+  
 export default Signin;

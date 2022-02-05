@@ -12,7 +12,9 @@ import SignIn from "./pages/Signin";
 
 //   return (
 function Layout() {
-  const user = { name: "a" };
+  const user = {
+    name:"a"
+  };
 
   return (
     <div className="app">

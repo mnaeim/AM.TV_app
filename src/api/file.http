@@ -1,22 +1,22 @@
-POST  https://3001-kumquat-xerinae-io6uxjnc.ws-us25.gitpod.io/api/register
+POST  https://3001-mnaeim-matvapp-zewp3qv4xrf.ws-us30.gitpod.io/api/register
 content-type: application/json
 
 {
-    "username":"zeededero",
-    "email": "sampeedadle@gmail.com",
-    "password": "1ed2d34"
+    "username":"test",
+    "email": "test@gmail.com",
+    "password": "test"
 }
 
 
 ###
-POST  https://3001-kumquat-xerinae-io6uxjnc.ws-us25.gitpod.io/api/login
+POST  https://3001-mnaeim-matvapp-zewp3qv4xrf.ws-us30.gitpod.io/api/login
 content-type: application/json
 
 {
    
-    "username":"zeededero",
-    "email": "sampeedadle@gmail.com",
-    "password": "1ed2d34"
+    "username":"test",
+    "email": "test@gmail.com",
+    "password": "test"
 }
 ###
 

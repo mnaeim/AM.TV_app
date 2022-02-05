@@ -1,5 +1,5 @@
 from flask import Flask, request, jsonify, url_for, Blueprint
-from api.models import db, User,Movies,Favorites
+from api.models import db, User,Movie,Favorite
 from api.utils import generate_sitemap, APIException
 from argon2 import PasswordHasher
 from flask_jwt_extended import create_access_token, jwt_required, get_jwt_identity
