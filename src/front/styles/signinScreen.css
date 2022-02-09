@@ -38,10 +38,10 @@
   ); */
 }
 
-/* .signinScreen_body > h5 {
+.signinScreen_body > h5 {
   font-size: 2rem;
   font-weight: 600;
-} */
+}
 
 .signinScreen_body {
   position: absolute;
