@@ -3,6 +3,7 @@ import { BrowserRouter, Route, Switch } from "react-router-dom";
 import { Home } from "./pages/Home";
 import Register from "./pages/Register";
 import SignIn from "./pages/Signin";
+import injectContext from "./store/appContext";
 
 //create your first component
 // export const Layout = () => {
@@ -13,7 +14,7 @@ import SignIn from "./pages/Signin";
 //   return (
 function Layout() {
   const user = {
-    name:"a"
+    name: "a",
   };
 
   return (
@@ -35,4 +36,4 @@ function Layout() {
   );
 }
 
-export default Layout;
+export default injectContext(Layout);

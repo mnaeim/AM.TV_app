@@ -23,36 +23,43 @@ export const Home = () => {
         className="title"
         title="MA-TV ORIGINALS"
         fetchUrl={requests.fetchNetflixOriginals}
+        isLargeRow
       />
       <Row
         className="title"
         title="Top Rated"
         fetchUrl={requests.fetchTopRated}
+        isLargeRow
       />
       <Row
         className="title"
         title="Action Movies"
         fetchUrl={requests.fetchActionMovies}
+        isLargeRow
       />
       <Row
         className="title"
         title="Comedy Movies"
         fetchUrl={requests.fetchComedyMovies}
+        isLargeRow
       />
       <Row
         className="title"
         title="Horror Movies"
         fetchUrl={requests.fetchHorrorMovies}
+        isLargeRow
       />
       <Row
         className="title"
         title="Romance Movies"
         fetchUrl={requests.fetchRomanceMovies}
+        isLargeRow
       />
       <Row
         className="title"
         title="Documentaries"
         fetchUrl={requests.fetchDocumentaries}
+        isLargeRow
       />
     </div>
   );
