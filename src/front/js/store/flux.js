@@ -34,7 +34,7 @@ const getState = ({ getStore, getActions, setStore }) => {
         };
         try {
           const resp = await fetch(
-            "https://3001-mnaeim-matvapp-zewp3qv4xrf.ws-us30.gitpod.io/api/login",
+            "https://3001-zerokitep-amtv-icrj2lr2md0.ws-us31.gitpod.io/api/login",
             opts
           );
           if (resp.status !== 200) {
@@ -49,6 +49,12 @@ const getState = ({ getStore, getActions, setStore }) => {
         } catch (error) {
           console.error("login failed");
         }
+      },
+
+      logout: () => {
+        sessionStorage.removeItem("token");
+        console.log("login out");
+        setStore({ token: null });
       },
 
       getMessage: () => {

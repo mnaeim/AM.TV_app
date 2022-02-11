@@ -45,12 +45,18 @@ function Signin() {
                     value={password}
                     onChange={(e) => setPassword(e.target.value)}
                   />
-                  <Button onClick={handleClick}>Watch Now</Button>
+                  <Button
+                    className="signin_Button"
+                    onClick={handleClick}
+                    variant="dark"
+                  >
+                    Watch Now
+                  </Button>
                   <br></br>
                   <h5>
                     <span className="signup_gray">New to AM-TV? </span>
                     <Link to="/register">
-                      <span className="signup_link">Sign Up now.</span>
+                      <span className="signup_link">Sign Up now</span>
                     </Link>
                   </h5>
                 </form>

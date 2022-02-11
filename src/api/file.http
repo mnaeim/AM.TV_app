@@ -1,4 +1,4 @@
-POST  https://3001-mnaeim-matvapp-zewp3qv4xrf.ws-us30.gitpod.io/api/register
+POST  https://3001-mnaeim-amtvapp-in7zkn1go4x.ws-us31.gitpod.io/api/register
 content-type: application/json
 
 {
@@ -9,7 +9,7 @@ content-type: application/json
 
 
 ###
-POST  https://3001-mnaeim-matvapp-zewp3qv4xrf.ws-us30.gitpod.io/api/login
+POST  https://3001-mnaeim-amtvapp-in7zkn1go4x.ws-us31.gitpod.io/api/login
 content-type: application/json
 
 {

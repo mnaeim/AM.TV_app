@@ -21,7 +21,7 @@ export const Home = () => {
       />
       <Row
         className="title"
-        title="MA-TV ORIGINALS"
+        title="AM-TV ORIGINALS"
         fetchUrl={requests.fetchNetflixOriginals}
         isLargeRow
       />
